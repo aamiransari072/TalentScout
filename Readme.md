@@ -66,7 +66,7 @@ Recruiters can access the insights to make informed decisions.
 
 Utilizes Google's Generative AI (Gemini-pro) for generating content and evaluating candidates.
 ### Architectural Decisions
-![Chatbot Workflow](project_flow\pgagi.drawio.png)
+![Chatbot Workflow](project_flow/pgagi.drawio.png)
 
 Modular design with an Agents class to encapsulate API interactions.
 Session management using st.session_state for seamless user experience.
