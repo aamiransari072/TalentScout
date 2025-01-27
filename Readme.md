@@ -88,16 +88,16 @@ Example: "Can you explain the difference between Python lists and tuples?"
 The next four questions increase in complexity, gradually testing the candidate's problem-solving skills, application of knowledge, and deep understanding of concepts.
 
 - Question 2 (Slightly Tougher): Introduce situational or real-world use cases to test applied knowledge.
-- Example: "How would you optimize a Python program that processes a list of 10 million items?"
+  - Example: "How would you optimize a Python program that processes a list of 10 million items?"
 
 - Question 3 (Intermediate): Explore technical depth by requiring a more detailed response.
-- Example: "Explain how Python's GIL (Global Interpreter Lock) impacts multi-threading, and how can it be mitigated?"
+  - Example: "Explain how Python's GIL (Global Interpreter Lock) impacts multi-threading, and how can it be mitigated?"
 
 - Question 4 (Advanced): Test theoretical understanding and ability to deal with edge cases.
-- Example: "What challenges would you face when integrating Python libraries like NumPy with C++ code, and how would you address them?"
+  - Example: "What challenges would you face when integrating Python libraries like NumPy with C++ code, and how would you address them?"
 
 - Question 5 (Expert-Level): Evaluate creativity and mastery by posing an open-ended question that requires a solution-oriented mindset.
-- Example: "Design an API in Python that supports asynchronous requests for real-time data fetching and briefly outline the architecture."
+  - Example: "Design an API in Python that supports asynchronous requests for real-time data fetching and briefly outline the architecture."
   
 ### Evaluation:
 #### Candidate Evaluation Process
