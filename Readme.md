@@ -25,7 +25,7 @@ Add API Keys:
 - Create a .env file in the project root directory.
 - Add your Google API Key:
 - GOOGLE_API_KEY=your_google_api_key_here
-Run the Application:
+* Run the Application:
 
 ```bash
 streamlit run test.py
@@ -35,14 +35,19 @@ Access the App:
 - Open your browser and navigate to http://localhost:8501.
 
 
-# Usage Guide
+## Usage Guide
 Launching the App:
 After running the app, you'll be greeted with a welcome message and guided through a series of questions.
 
 # Step-by-Step Information Gathering:
 
-Enter details like your full name, email, years of experience, and technical skills.
+Enter details like your 
+- full name
+- email
+- years of experience
+- technical skills.
 Respond to dynamically generated questions crafted by the AI model.
+
 Candidate Evaluation:
 
 Once all questions are answered, the assistant evaluates your responses using predefined criteria.
