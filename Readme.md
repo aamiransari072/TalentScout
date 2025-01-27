@@ -1,28 +1,31 @@
-Talent Scout - AI-Powered Hiring Assistant
-Project Overview
+# Talent Scout - AI-Powered Hiring Assistant
+## Project Overview
 Talent Scout is a conversational AI-based hiring assistant designed to streamline the recruitment process. Built using Streamlit and Google’s Generative AI, the chatbot guides users through a step-by-step interview process, collecting information about their skills, experience, and preferences. It dynamically generates additional questions and evaluates candidates based on their responses, providing insights for recruiters.
 
 Installation Instructions
 Clone the Repository:
 
-bash
+```bash
 Copy
 Edit
 git clone https://github.com/your-repo/talent-scout.git
 cd talent-scout
+```
 Set Up a Virtual Environment:
 
-bash
+```bash
 Copy
 Edit
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 Install Required Dependencies:
 
-bash
+```bash
 Copy
 Edit
 pip install -r requirements.txt
+```
 Add API Keys:
 
 Create a .env file in the project root directory.
@@ -33,10 +36,11 @@ Edit
 GOOGLE_API_KEY=your_google_api_key_here
 Run the Application:
 
-bash
+```bash
 Copy
 Edit
 streamlit run test.py
+```
 Access the App:
 
 Open your browser and navigate to http://localhost:8501.
@@ -44,7 +48,7 @@ Usage Guide
 Launching the App:
 After running the app, you'll be greeted with a welcome message and guided through a series of questions.
 
-Step-by-Step Information Gathering:
+# Step-by-Step Information Gathering:
 
 Enter details like your full name, email, years of experience, and technical skills.
 Respond to dynamically generated questions crafted by the AI model.
