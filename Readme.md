@@ -6,45 +6,36 @@ Installation Instructions
 Clone the Repository:
 
 ```bash
-Copy
-Edit
 git clone https://github.com/your-repo/talent-scout.git
 cd talent-scout
 ```
 Set Up a Virtual Environment:
 
 ```bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 Install Required Dependencies:
 
 ```bash
-Copy
-Edit
 pip install -r requirements.txt
 ```
 Add API Keys:
 
-Create a .env file in the project root directory.
-Add your Google API Key:
-plaintext
-Copy
-Edit
-GOOGLE_API_KEY=your_google_api_key_here
+- Create a .env file in the project root directory.
+- Add your Google API Key:
+- GOOGLE_API_KEY=your_google_api_key_here
 Run the Application:
 
 ```bash
-Copy
-Edit
 streamlit run test.py
 ```
 Access the App:
 
-Open your browser and navigate to http://localhost:8501.
-Usage Guide
+- Open your browser and navigate to http://localhost:8501.
+
+
+# Usage Guide
 Launching the App:
 After running the app, you'll be greeted with a welcome message and guided through a series of questions.
 
