@@ -56,9 +56,12 @@ Recruiters can access the insights to make informed decisions.
 ## Technical Details
 ### Libraries Used:
 
-#### Streamlit: Frontend framework for interactive web apps.
-#### google.generativeai: API for generating questions and evaluations.
-#### dotenv: Manages environment variables securely.
+#### Streamlit: 
+- Frontend framework for interactive web apps.
+#### google.generativeai: 
+- API for generating questions and evaluations.
+#### dotenv: 
+- Manages environment variables securely.
 ### Model Details:
 
 Utilizes Google's Generative AI (Gemini-pro) for generating content and evaluating candidates.
@@ -73,8 +76,29 @@ Prompts are designed to elicit precise and structured responses. For example:
 - Prompt for name: "What is your full name?"
 - Prompt for skills: "What is your tech stack (e.g., Python, Django, SQL)?"
 #### Dynamic Question Generation:
-Prompts for additional questions are crafted to analyze candidate data and generate meaningful follow-ups, e.g., "Based on the user's tech stack, generate technical questions."
 
+##### Prompt Design for Question Generation
+Our approach to crafting questions is systematic and hierarchical, ensuring a smooth progression in difficulty while analyzing the candidate's expertise. Here's the step-by-step methodology:
+
+##### 1. Necessity Question:
+The first question focuses on the core, essential knowledge of the candidate's stated tech stack. This ensures we establish a baseline understanding of their fundamental knowledge.
+Example: "Can you explain the difference between Python lists and tuples?"
+
+##### 2. Progressively Tougher Questions:
+The next four questions increase in complexity, gradually testing the candidate's problem-solving skills, application of knowledge, and deep understanding of concepts.
+
+- Question 2 (Slightly Tougher): Introduce situational or real-world use cases to test applied knowledge.
+- Example: "How would you optimize a Python program that processes a list of 10 million items?"
+
+- Question 3 (Intermediate): Explore technical depth by requiring a more detailed response.
+- Example: "Explain how Python's GIL (Global Interpreter Lock) impacts multi-threading, and how can it be mitigated?"
+
+- Question 4 (Advanced): Test theoretical understanding and ability to deal with edge cases.
+- Example: "What challenges would you face when integrating Python libraries like NumPy with C++ code, and how would you address them?"
+
+- Question 5 (Expert-Level): Evaluate creativity and mastery by posing an open-ended question that requires a solution-oriented mindset.
+- Example: "Design an API in Python that supports asynchronous requests for real-time data fetching and briefly outline the architecture."
+  
 ### Evaluation:
 Prompts for scoring candidates include:
 
