@@ -100,9 +100,42 @@ The next four questions increase in complexity, gradually testing the candidate'
 - Example: "Design an API in Python that supports asynchronous requests for real-time data fetching and briefly outline the architecture."
   
 ### Evaluation:
-Prompts for scoring candidates include:
+#### Candidate Evaluation Process
 
-"Evaluate this candidate based on experience, skills, and desired position. Provide a concise assessment."
+Our scoring system evaluates candidates systematically by analyzing their responses to progressively challenging questions. Below is the structured approach used:
+
+##### 1. Necessity Question Assessment
+- The **first question** is designed to test the candidate's essential knowledge relevant to their provided tech stack.
+- **Scoring Rule**:
+  - If the candidate answers the necessity question correctly:
+    - They are awarded a score of `1`.
+    - The system proceeds to the next set of questions.
+  - If the candidate answers incorrectly:
+    - They are deemed unsuitable for the role based on their details.
+    - The evaluation process terminates.
+
+##### 2. Progressive Question Evaluation
+- After the necessity question, the candidate is presented with **four additional questions** of increasing difficulty.
+- **Scoring Rule**:
+  - For each **correct answer**:
+    - A `0` is appended to the candidate's existing score, reflecting incremental competence.
+  - For each **incorrect answer**:
+    - No changes are made to the score.
+    - The system skips to the next question.
+
+##### 3. Final Evaluation
+- At the end of the process, the final score reflects the candidate's performance, with emphasis on their ability to answer both basic and progressively harder questions correctly.
+
+##### Example Scoring Scenario
+- Candidate answers the necessity question correctly → Score: 1.
+- Candidate answers the second question correctly → Score: 10.
+- Candidate answers the third question incorrectly → Score remains 10 (skip to the next).
+- Candidate answers the fourth question correctly → Score: 100.
+- Candidate answers the fifth question incorrectly → Final Score: 100.
+
+This structured approach ensures a fair and progressive evaluation of the candidate’s expertise while aligning with the requirements of the role.
+
+
 ### Challenges & Solutions
 #### Session State Management:
 
