@@ -46,48 +46,55 @@ Enter details like your
 - email
 - years of experience
 - technical skills.
+
 Respond to dynamically generated questions crafted by the AI model.
 
-Candidate Evaluation:
+### Candidate Evaluation:
 
 Once all questions are answered, the assistant evaluates your responses using predefined criteria.
 Recruiters can access the insights to make informed decisions.
-Technical Details
-Libraries Used:
+## Technical Details
+### Libraries Used:
 
-Streamlit: Frontend framework for interactive web apps.
-google.generativeai: API for generating questions and evaluations.
-dotenv: Manages environment variables securely.
-Model Details:
+#### Streamlit: Frontend framework for interactive web apps.
+#### google.generativeai: API for generating questions and evaluations.
+#### dotenv: Manages environment variables securely.
+### Model Details:
 
 Utilizes Google's Generative AI (Gemini-pro) for generating content and evaluating candidates.
-Architectural Decisions:
+### Architectural Decisions:
 
 Modular design with an Agents class to encapsulate API interactions.
 Session management using st.session_state for seamless user experience.
-Prompt Design
-Information Gathering:
+### Prompt Design
+#### Information Gathering:
 Prompts are designed to elicit precise and structured responses. For example:
 
-Prompt for name: "What is your full name?"
-Prompt for skills: "What is your tech stack (e.g., Python, Django, SQL)?"
-Dynamic Question Generation:
+- Prompt for name: "What is your full name?"
+- Prompt for skills: "What is your tech stack (e.g., Python, Django, SQL)?"
+#### Dynamic Question Generation:
 Prompts for additional questions are crafted to analyze candidate data and generate meaningful follow-ups, e.g., "Based on the user's tech stack, generate technical questions."
 
-Evaluation:
+### Evaluation:
 Prompts for scoring candidates include:
 
 "Evaluate this candidate based on experience, skills, and desired position. Provide a concise assessment."
-Challenges & Solutions
-Session State Management:
+### Challenges & Solutions
+#### Session State Management:
 
-Challenge: Ensuring the chatbot flow remained consistent during user interactions.
-Solution: Used st.session_state to persist chat history, user data, and flow stages.
-Dynamic Question Parsing:
+##### Challenge: 
+- Ensuring the chatbot flow remained consistent during user interactions.
+##### Solution: 
+- Used st.session_state to persist chat history, user data, and flow stages.
+#### Dynamic Question Parsing:
 
-Challenge: Handling JSON parsing issues with AI-generated questions.
-Solution: Implemented error handling to validate and parse JSON safely.
-Prompt Engineering:
+##### Challenge: 
+- Handling JSON parsing issues with AI-generated questions.
+##### Solution: 
+- Implemented error handling to validate and parse JSON safely.
+#### Prompt Engineering:
 
-Challenge: Crafting effective prompts for diverse user inputs.
-Solution: Iterated on prompts to balance specificity and adaptability for varied responses.
+##### Challenge: 
+- Crafting effective prompts for diverse user inputs.
+##### Solution: 
+- Iterated on prompts to balance specificity and adaptability for varied responses.
