@@ -3,43 +3,43 @@
 Talent Scout is a conversational AI-based hiring assistant designed to streamline the recruitment process. Built using Streamlit and Google’s Generative AI, the chatbot guides users through a step-by-step interview process, collecting information about their skills, experience, and preferences. It dynamically generates additional questions and evaluates candidates based on their responses, providing insights for recruiters.
 
 Installation Instructions
-Clone the Repository:
+Clone the Repository
 
 ```bash
 git clone https://github.com/your-repo/talent-scout.git
 cd talent-scout
 ```
-Set Up a Virtual Environment:
+Set Up a Virtual Environment
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
-Install Required Dependencies:
+Install Required Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-Add API Keys:
+Add API Keys
 
 - Create a .env file in the project root directory.
 - Add your Google API Key:
 - GOOGLE_API_KEY=your_google_api_key_here
-* Run the Application:
+* Run the Application
 
 ```bash
 streamlit run test.py
 ```
-Access the App:
+Access the App
 
 - Open your browser and navigate to http://localhost:8501.
 
 
 ## Usage Guide
-Launching the App:
+Launching the App
 After running the app, you'll be greeted with a welcome message and guided through a series of questions.
 
-# Step-by-Step Information Gathering:
+# Step-by-Step Information Gathering
 
 Enter details like your 
 - full name
@@ -49,42 +49,42 @@ Enter details like your
 
 Respond to dynamically generated questions crafted by the AI model.
 
-### Candidate Evaluation:
+### Candidate Evaluation
 
 Once all questions are answered, the assistant evaluates your responses using predefined criteria.
 Recruiters can access the insights to make informed decisions.
 ## Technical Details
-### Libraries Used:
+### Libraries Used
 
-#### Streamlit: 
+#### Streamlit
 - Frontend framework for interactive web apps.
-#### google.generativeai: 
+#### google.generativeai 
 - API for generating questions and evaluations.
-#### dotenv: 
+#### dotenv 
 - Manages environment variables securely.
-### Model Details:
+### Model Details
 
 Utilizes Google's Generative AI (Gemini-pro) for generating content and evaluating candidates.
-### Architectural Decisions:
+### Architectural Decisions
 
 Modular design with an Agents class to encapsulate API interactions.
 Session management using st.session_state for seamless user experience.
 ### Prompt Design
-#### Information Gathering:
+#### Information Gathering
 Prompts are designed to elicit precise and structured responses. For example:
 
 - Prompt for name: "What is your full name?"
 - Prompt for skills: "What is your tech stack (e.g., Python, Django, SQL)?"
-#### Dynamic Question Generation:
+#### Dynamic Question Generation
 
 ##### Prompt Design for Question Generation
-Our approach to crafting questions is systematic and hierarchical, ensuring a smooth progression in difficulty while analyzing the candidate's expertise. Here's the step-by-step methodology:
+Our approach to crafting questions is systematic and hierarchical, ensuring a smooth progression in difficulty while analyzing the candidate's expertise. Here's the step-by-step methodology
 
-##### 1. Necessity Question:
+##### 1. Necessity Question
 The first question focuses on the core, essential knowledge of the candidate's stated tech stack. This ensures we establish a baseline understanding of their fundamental knowledge.
 Example: "Can you explain the difference between Python lists and tuples?"
 
-##### 2. Progressively Tougher Questions:
+##### 2. Progressively Tougher Questions
 The next four questions increase in complexity, gradually testing the candidate's problem-solving skills, application of knowledge, and deep understanding of concepts.
 
 - Question 2 (Slightly Tougher): Introduce situational or real-world use cases to test applied knowledge.
@@ -99,7 +99,7 @@ The next four questions increase in complexity, gradually testing the candidate'
 - Question 5 (Expert-Level): Evaluate creativity and mastery by posing an open-ended question that requires a solution-oriented mindset.
   - Example: "Design an API in Python that supports asynchronous requests for real-time data fetching and briefly outline the architecture."
   
-### Evaluation:
+### Evaluation
 #### Candidate Evaluation Process
 
 Our scoring system evaluates candidates systematically by analyzing their responses to progressively challenging questions. Below is the structured approach used:
@@ -137,21 +137,21 @@ This structured approach ensures a fair and progressive evaluation of the candid
 
 
 ### Challenges & Solutions
-#### Session State Management:
+#### Session State Management
 
-##### Challenge: 
+##### Challenge 
 - Ensuring the chatbot flow remained consistent during user interactions.
-##### Solution: 
+##### Solution 
 - Used st.session_state to persist chat history, user data, and flow stages.
 #### Dynamic Question Parsing:
 
-##### Challenge: 
+##### Challenge 
 - Handling JSON parsing issues with AI-generated questions.
-##### Solution: 
+##### Solution 
 - Implemented error handling to validate and parse JSON safely.
-#### Prompt Engineering:
+#### Prompt Engineering
 
-##### Challenge: 
+##### Challenge 
 - Crafting effective prompts for diverse user inputs.
-##### Solution: 
+##### Solution 
 - Iterated on prompts to balance specificity and adaptability for varied responses.
